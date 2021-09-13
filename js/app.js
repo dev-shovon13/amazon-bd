@@ -14,10 +14,10 @@ const showProducts = (products) => {
     div.innerHTML = `
   <div class="card h-100">
     <img src=${image} class="card-img-top p-3" height="250" alt="...">
-    <div class ="card-body">
+    <div class ="card-body bg-light">
       <h5 class="fw-light">${product.title}</h5>
     </div>
-    <div class="p-3">
+    <div class="p-3 bg-light">
       <p class="text-info"><span class="fw-bold text-secondary">Category: </span>${product.category}</p>
       <p class="fw-bold"><span class="fw-light">Average Rating: </span>${product.rating.rate}</p>
       <p class="fw-bold"><span class="fw-light">Total Ratings: </span>${product.rating.count}</p>
