@@ -18,14 +18,14 @@ const showProducts = (products) => {
       <h5 class="fw-light">${product.title}</h5>
     </div>
     <div class="p-3 bg-light">
-      <p class="text-info"><span class="fw-bold text-secondary">Category: </span>${product.category}</p>
-      <p class="fw-bold"><span class="fw-light">Average Rating: </span>${product.rating.rate}</p>
-      <p class="fw-bold"><span class="fw-light">Total Ratings: </span>${product.rating.count}</p>
-    <h5 class="mb-4">Price: <span class="text-warning">$ </span><span class="text-primary fw-bold">${product.price}</span></h5>
-    <div class ="d-flex justify-content-between">
-    <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button id="details-btn" class="btn btn-danger">Details</button></div>
-    </div>
+      <p class="mb-1 text-info"><span class="fw-bold text-secondary">Category: </span>${product.category}</p>
+      <p class="mb-1 fw-bold"><span class="fw-light">Average Rating: <i class="fas fa-star text-warning"></i> </span>${product.rating.rate}</p>
+      <p class="mb-1 fw-bold"><span class="fw-light">Total Ratings: <i class="fas fa-users text-secondary"></i> </span>${product.rating.count}</p>
+      <p class="fw-bold">Price: <span class="text-warning  fs-5">$ </span><span class="text-primary fw-bold fs-5">${product.price}</span></p>
+      <div class ="d-flex justify-content-between mt-3">
+        <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-outline-success"><i class="fas fa-cart-plus"></i> add to cart</button>
+        <button id="details-btn" class="btn btn-outline-danger">Details</button></div>
+      </div>
     </div>
   </div>`;
     document.getElementById("all-products").appendChild(div);
